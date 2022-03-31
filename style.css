@@ -1,0 +1,25 @@
+/* * {
+    border: solid red;
+} */
+
+.container {
+    display: flex;
+    height: 1000px;
+    background-image: url("assets/milad-fakurian-wNsHBf_bTBo-unsplash.jpg");
+    background-size: cover;
+    /* background-position: center; */
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#logo {
+    width: 300px;
+    height: 300px;
+    align-items: center;
+    
+    
+}
