@@ -1,9 +1,10 @@
 :root {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 
 .grid-container {
+    width: 100vw;
     background-image: url("assets/milad-fakurian-wNsHBf_bTBo-unsplash.jpg");
     background-size: cover;
     display: grid;
@@ -11,9 +12,9 @@
     grid-auto-rows: 200px;
     grid-template-areas: 
     "sidebar header"
-    "logo content"
-    "empty form"
-    "credentials signup"
+    "logo header"
+    "credentials form"
+    "credentials form"
     
 }
 /* Declaring the grid-items one by one */
@@ -21,68 +22,140 @@
     grid-area: sidebar;
 }
 
-.grid-item-4 {
+.grid-item-2 {
+    grid-area: header;
+    padding-top: 100px;
     padding-left: 20px;
     font-size: 16px;
+
+    
 }
-.grid-item-7 {
+
+.grid-item-3 {
+    grid-area: logo;
+}
+.grid-item-4 {
+    grid-area: credentials;
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
-.grid-item-7 div {
+
+.credit {
     padding: 10px;
     font-size: 0.5em;
-    color: aliceblue;
-    
+    color: aliceblue; 
 }
 
-#logo {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    position: relative;
-    z-index: 10;
-}
-
-.logo-box {
-    background-color: #37516c88
-}
-
-.grid-item-6 {
+.grid-item-5 {
+    grid-area: form;
     background-color: white;
 }
 
-/* .grid-item-6 div {
-    box-shadow: 10px 5px 5px black;
-} */
-.grid-item-2, .grid-item-4, .grid-item-8 {
-    background-color: aliceblue;
+.form {
+    background-color: white;
+    box-shadow: 0px 0.1px 0.1px 0.1px black;
+}
+
+.grid-item-6 {
+  grid-area: credentials;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.grid-item-6 div {
+    padding: 10px;
+    font-size: 0.5em;
+    color: aliceblue; 
+}
+
+.grid-item-7 {
+    grid-area: signup;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+      margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.logo-box {
+    background-color: #37516c88;
+}
+
+.grid-item-2, .grid-item-5 {
+    background-color: #dbe8f3;
+    box-shadow: 0px 0.1px 0.1px 0.1px black
 
 }
 
-.credentials {
-    justify-content: flex-start;
-    align-content: flex-start;
-}
  
+
+
+
 
 
 /* Form Styling */
 
-.form {
-    font-size: 10px;
-    padding: 10px;
-}
 
-fieldset > div {
-    margin-bottom: 20px;
+.form{
+    padding-left: 20px;
+    background-color: white;
+    box-shadow: 0 10px 20px -2px rgb(22, 22, 22);
     display: flex;
     flex-flow: row wrap;
-  }
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
 
-  fieldset {
-      border: none;
-  }
+.input{
+    display: flex;
+    flex-flow: column wrap;
+    width: 40%;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    opacity: 50%;
+}
 
-  
+.form-title{
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+input{
+
+    border: 1px solid rgb(77, 77, 77);
+    border-radius: 3px; 
+}
+
+input:focus{
+    outline: none;
+    border: 2px solid #d3206c
+}
+
+button{
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    background-color: #e22274;
+    color: white;
+    width: 200px;
+}
+
+button:hover{
+    background-color: #17181f;
+    
+}
+
+.button {
+    padding-left: 20px;
+}
+
+.log-in {
+    padding-left: 20px;
+}
